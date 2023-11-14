@@ -1,0 +1,46 @@
+.card-slider-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  .card-slider-view::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-slider-view {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none !important;
+    overflow: -moz-scrollbars-none !important;
+    gap: 24px;
+
+    .scroll-deem-right-background {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      width: 48px;
+      height: 100%;
+      align-items: center;
+      background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: z-index(base);
+    }
+
+    .scroll-deem-left-background {
+      position: absolute;
+      display: flex;
+      width: 48px;
+      height: 100%;
+      align-items: center;
+      left: 0px;
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: 2;
+    }
+  }
+
+  .card-grid-view {
+    display: none;
+    width: 100%;
+  }
+}
